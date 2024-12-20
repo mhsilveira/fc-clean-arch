@@ -26,7 +26,7 @@ productRoute.get('/', async (req: Request, res: Response) => {
 
   try {
     const output = await usecase.execute()
-    res.status(200).send(output) // Incluí o status 200 explicitamente.
+    res.status(200).send(output)
   } catch (err) {
     res.status(500).send(err)
   }
